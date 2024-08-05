@@ -1,0 +1,405 @@
+/* Style pour les formulaires de connexion et d'inscription */
+#loginFormu, #registrationForm {
+  display: none;
+  margin: 20px auto;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+#loginFormu input, #registrationForm input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#loginFormu button, #registrationForm button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#loginFormu button:hover, #registrationForm button:hover {
+  background-color: #45a049;
+}
+/* Style for the publications */
+#publications-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.publication {
+width: 100%;
+padding: 20px;
+margin-bottom: 20px;
+background-color: #ffffff;
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.publication h2 {
+margin: 0;
+font-size: 1.5em;
+color: #333333;
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+.publication p {
+margin: 10px 0;
+color: #666666;
+text-align: justify;
+line-height: 1.6;
+}
+
+.publication .comment-button {
+display: block;
+margin: 20px auto 0;
+padding: 10px 20px;
+background-color: #007bff;
+color: #ffffff;
+border: none;
+border-radius: 25px;
+font-size: 1.2em;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.publication .comment-button:hover {
+background-color: #0056b3;
+}
+/* Style for the comment form */
+.comment-form {
+display: flex;
+align-items: center;
+}
+
+.comment-input {
+width: 100%; /* Prend toute la largeur disponible */
+padding: 10px; /* Espace intérieur */
+border: 1px solid #ccc; /* Bordure avec couleur grise */
+border-radius: 5px; /* Coins arrondis */
+font-size: 14px; /* Taille de police */
+color: #333; /* Couleur du texte */
+outline: none; /* Supprime la bordure bleue lors du focus */
+transition: border-color 0.3s ease; /* Transition pour la couleur de la bordure */
+}
+
+.comment-input::placeholder {
+color: #999; /* Couleur du texte de l'attribut placeholder */
+}
+
+.comment-input:focus {
+border-color: #007bff; /* Couleur de la bordure lors du focus */
+}
+
+.send-button {
+padding: 10px 20px;
+background-color: #007bff;
+color: #ffffff;
+border: none;
+border-radius: 0 5px 5px 0;
+font-size: 14px;
+cursor: pointer;
+
+}
+
+.send-button:hover {
+background-color: #0056b3;
+}
+
+
+#navbar {
+  display: none;
+  width: 100%;
+  background-color: #20232a; /* Couleur de fond */
+  overflow: hidden;
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #ffffff; /* Couleur du texte */
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide */
+}
+
+#navbar a:hover {
+  background-color: #282c34; /* Couleur de fond au survol */
+  color: #61dafb; /* Couleur du texte au survol */
+}
+
+#navbar a:last-child {
+  float: right;
+}
+
+#navbar a:first-child,
+#navbar a:nth-child(2),
+#navbar a:nth-child(3) {
+  border-bottom: 2px solid transparent; /* Ligne en dessous des 3 premiers liens */
+}
+
+@media (max-width: 768px) {
+  #navbar a {
+      padding: 10px; /* Réduire l'espacement pour les appareils mobiles */
+  }
+}
+
+/* Style pour la création de post */
+#creatPost {
+  display: none;
+  margin: 20px auto;
+  width: 60%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#creatPost input, #creatPost textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#creatPost button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#creatPost button:hover {
+  background-color: #45a049;
+}
+
+/* Style pour les utilisateurs */
+#users {
+  display: none;
+  margin: 20px auto;
+  width: 80%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.user:hover {
+  background-color: #f1f1f1;
+}
+
+.nickname {
+  flex-grow: 1;
+}
+
+.status-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+#status-on{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+}
+#status-off{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+/* Style pour les messages */
+.chat-box {
+  overflow-y:scroll;
+  height: 400px;
+  margin: 20px auto;
+  width: auto;
+  padding: inherit;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+div#chat-box-4 {}
+
+.chat-box h2 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
+
+.chat-content {
+  max-height: 300px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.message-sender {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+}
+
+.message-receiver {
+  background-color: #ffffff;
+  align-self: flex-start;
+}
+
+.chat-box input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chat-box button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-box button:hover {
+  background-color: #0056b3;
+}
+
+/* Messages d'erreur */
+#error-message, #error-messageL {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.comments-section {
+  margin-top: 20px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+/* Style for each comment */
+.comment {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style for the username */
+.comment span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style for the comment content */
+.comment p {
+  margin-top: 5px;
+  color: #666;
+}
+
+/* Style for the creation date */
+.comment span.creation-date {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #999;
+}
+
+.typing-loader{
+  margin: 10px auto;
+  width: 6px;
+  height: 6px;
+  -webkit-animation: line 1s linear infinite alternate;
+ -moz-animation: line 1s linear infinite alternate;
+ animation: line 1s linear infinite alternate;
+}
+
+@-webkit-keyframes line{
+  0%{
+     
+      background-color: rgba(0,0,0, 1);
+      box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2), 
+                  24px 0px 0px 0px rgba(0,0,0,0.2);             
+    }
+  25%{ 
+          background-color: rgba(0,0,0, 0.4);
+          box-shadow: 12px 0px 0px 0px rgba(0,0,0,2), 
+                  24px 0px 0px 0px rgba(0,0,0,0.2);             
+  }
+  75%{ background-color: rgba(0,0,0, 0.4);
+      box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2), 
+                  24px 0px 0px 0px rgba(0,0,0,2);        
+    }
+}
+
+@-moz-keyframes line{
+  0%{
+     
+      background-color: rgba(0,0,0, 1);
+      box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2), 
+                  24px 0px 0px 0px rgba(0,0,0,0.2);          
+    }
+  25%{ 
+          background-color: rgba(0,0,0, 0.4);
+          box-shadow: 12px 0px 0px 0px rgba(0,0,0,2), 
+                  24px 0px 0px 0px rgba(0,0,0,0.2);   
+  }
+  75%{ background-color: rgba(0,0,0, 0.4);
+      box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2), 
+                  24px 0px 0px 0px rgba(0,0,0,2);         
+    }
+}
+
+@keyframes line{
+  0%{
+     
+      background-color: rgba(0,0,0, 1);
+      box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2), 
+                  24px 0px 0px 0px rgba(0,0,0,0.2);        
+    }
+  25%{ 
+          background-color: rgba(0,0,0, 0.4);
+          box-shadow: 12px 0px 0px 0px rgba(0,0,0,2), 
+                  24px 0px 0px 0px rgba(0,0,0,0.2);             
+  }
+  75%{ background-color: rgba(0,0,0, 0.4);
+      box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2), 
+                  24px 0px 0px 0px rgba(0,0,0,2);       
+    }
+}
