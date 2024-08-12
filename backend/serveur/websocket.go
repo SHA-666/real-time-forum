@@ -45,13 +45,7 @@ func deleteConnectedUser(userID string) string {
 }
 
 func HandleWS(w http.ResponseWriter, r *http.Request) {
-	err := db.InitDB()
-	if err != nil {
-		log.Println("Error while opening db err = :", err)
-		return
-	}
-	defer db.DB.Close()
-
+	
 	conn, err := upgrader.Upgrade(w, r, nil)
 	if err != nil {
 		log.Println("Error upgrading to WebSocket:", err)
@@ -76,7 +70,7 @@ func HandleWS(w http.ResponseWriter, r *http.Request) {
 		switch data.DataName {
 		case "typing":
 			// broadcast the typin
-			broadcastTypinInProgress(ConnectedUsers, data.Typing.SenderID, data.Typing.ReceiverID,data.Typing.Leng)
+			broadcastTypinInProgress(ConnectedUsers, data.Typing.SenderID, data.Typing.ReceiverID, data.Typing.Leng)
 		case "userconnection":
 			// if  want redirect to login ( need to update showhome func jacascript)
 			if data.UserConn.Id != "" {
@@ -232,7 +226,7 @@ func broadcastOnlineUsers(online map[string]*websocket.Conn, mode string, id str
 	return nil
 }
 
-func broadcastTypinInProgress(online map[string]*websocket.Conn, sender string, receiver string,lenght int) error {
+func broadcastTypinInProgress(online map[string]*websocket.Conn, sender string, receiver string, lenght int) error {
 	onlineForTyping := make(map[string]*websocket.Conn)
 	receiv := strings.Split(receiver, "-")
 	receiverID := receiv[len(receiv)-1]
@@ -246,7 +240,7 @@ func broadcastTypinInProgress(online map[string]*websocket.Conn, sender string, 
 	response := ResponseForTypin{
 		DataName: "typing",
 		Data:     sender,
-		Leng : lenght,
+		Leng:     lenght,
 	}
 
 	data, err := json.Marshal(response)
